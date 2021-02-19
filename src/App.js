@@ -27,7 +27,6 @@ const App = () => {
   return (
     <div className="App">
       {<Header/>}
-      <h2 className="Header">Characters</h2>
       {
         characterData.map(individual => {
           return <Character individual={individual}/>

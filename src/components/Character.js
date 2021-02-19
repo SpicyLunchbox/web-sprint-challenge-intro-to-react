@@ -9,6 +9,14 @@ const kf = keyframes`
 const StyledCharacter = styled.div`
 opacity: 0;
 animation: ${kf} 3.0s ease-in-out forwards;
+h3 {
+    color: yellow;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 `
 
 export default function Character({individual}) {

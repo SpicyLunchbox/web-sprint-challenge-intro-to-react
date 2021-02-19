@@ -10,6 +10,7 @@ const kf = keyframes`
 const StyledFooter = styled.div`
 opacity: 0;
 animation: ${kf} 4.0s ease-in-out forwards;
+color: yellow;
 `
 
 export default function Footer() {

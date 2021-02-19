@@ -10,6 +10,7 @@ const kf = keyframes`
 const StyledHeader = styled.div`
 opacity: 0;
 animation: ${kf} 1.0s ease-in-out forwards;
+color: yellow;
 `
 
 export default function Header() {
@@ -17,6 +18,7 @@ export default function Header() {
         <StyledHeader>
             <h1>Star Wars</h1>
             <p>A long time ago in a galaxy far far away...</p>
+            <h2 className="Header">Characters</h2>
         </StyledHeader>      
     )
 }
