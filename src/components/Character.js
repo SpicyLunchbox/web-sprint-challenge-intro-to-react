@@ -17,6 +17,10 @@ ul {
     margin: 0;
     padding: 0;
 }
+a {
+    color: yellow;
+    text-decoration: none;
+}
 `
 
 export default function Character({individual}) {
@@ -28,6 +32,7 @@ export default function Character({individual}) {
                 <li>Eye Color: {individual.eye_color}</li>
                 <li>Gender: {individual.gender}</li>
                 <li>Hair Color: {individual.hair_color}</li>
+                <li>{individual.name === "Darth Vader" && <a href="http://www.nooooooooooooooo.com/">Click when Vader's code won't compile</a>}</li>
             </ul>
         </StyledCharacter>
     )

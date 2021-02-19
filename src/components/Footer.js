@@ -16,7 +16,7 @@ color: yellow;
 export default function Footer() {
     return (
         <StyledFooter>
-            <h1>Star Wars</h1>
+            <h2>May the Force be with you</h2>
         </StyledFooter>      
     )
 }
