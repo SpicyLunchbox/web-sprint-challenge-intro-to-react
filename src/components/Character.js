@@ -11,16 +11,16 @@ opacity: 0;
 animation: ${kf} 3.0s ease-in-out forwards;
 `
 
-export default function Character(props) {
-    const {characterData} = props
-    
-    
-
-    
-
+export default function Character({individual}) {
     return (
         <StyledCharacter>
-            <p>{characterData.name}</p>
+            <h3>{individual.name}</h3>
+            <ul>
+                <li>Born: {individual.birth_year}</li>
+                <li>Eye Color: {individual.eye_color}</li>
+                <li>Gender: {individual.gender}</li>
+                <li>Hair Color: {individual.hair_color}</li>
+            </ul>
         </StyledCharacter>
     )
-}
+}   

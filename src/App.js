@@ -6,7 +6,7 @@ import Footer from './components/Footer.js'
 import Character from './components/Character.js'
 
 const App = () => {
-  const [characterData, setCharacterData] = useState({})
+  const [characterData, setCharacterData] = useState([])
   
 
   
@@ -16,6 +16,7 @@ const App = () => {
     axios.get(`https://swapi.dev/api/people/`)
       .then(res => {
         setCharacterData(res.data)
+
       })
       .catch(err => {
         console.log(err)
@@ -27,10 +28,14 @@ const App = () => {
     <div className="App">
       {<Header/>}
       <h2 className="Header">Characters</h2>
-      {<Character  characterData={characterData} />}
+      {
+        characterData.map(individual => {
+          return <Character individual={individual}/>
+        })
+      }
       {<Footer/>}
     </div>
-  );
+  )
 }
 
 export default App;
